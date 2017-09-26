@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+	<meta charset="utf-8">
+	<title>Map</title>
+	<style>
+		.header,
+		.main, 
+		.footer,
+		.sidebar {
+			height: 50px;
+			text-align: center;
+			align-self: center;
+		}
+		.container {
+			display: flex;
+			flex-flow: row wrap;
+		}
+		span {
+			display: flex;
+			height: 100%;
+			align-items: center; /* vertical alignment */
+			justify-content: center; /* horizontal alignment */
+			font-weight: bold;
+		}
+		/****************************************/
+		.header {
+			flex: 1 100%;
+			background: orange;
+		}
+		/**
+		* Will occupy all available space
+		**/
+		.main {
+			flex: auto;
+			background: tomato;
+		}
+		/**
+		* Width will be exact 300px
+		**/
+		.footer {
+			flex: none;
+			background:pink;
+			width: 300px;
+		}
+		/**
+		* Width will be between 100-200px
+		**/
+		.sidebar {
+			flex: initial; /* default value */
+			background: green;
+			width: 200px;
+  			min-width: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<span>flex: 1 100%;</span>
+		</header>
+		<div class="sidebar">
+			<span>flex: initial;(default value)</span>
+		</div>
+		<main class="main">
+			<span>flex: auto;</span>
+		</main>
+		<footer class="footer">
+			<span>flex: none; width: 300px;</span>
+		</footer>
+	</div>
+
+</body>
+
+</html>
